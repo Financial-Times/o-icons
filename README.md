@@ -57,15 +57,15 @@ This option has the added flexibility of supporting coloured icons and PNG fallb
 <i class="icon-plus"></i>
 ```
 
-The [Responsive Image Service](https://image.webservices.ft.com/) helps serving resolution-independent SVG icons with a resized PNG fallback. Using the mixin from above, you'll get the following output:
+The [Responsive Image Service](https://www.ft.com/__origami/service/image/v2) helps serving resolution-independent SVG icons with a resized PNG fallback. Using the mixin from above, you'll get the following output:
 
 ```scss
 .icon-plus {
 	// Older browsers: PNG fallback (resized to 32px wide)
-	background-image: url('//image.webservices.ft.com/v1/images/raw/fticon:plus?width=32&format=png&source=o-icons');
+	background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/fticon:plus?width=32&format=png&source=o-icons');
 	// Modern browsers: SVG covering the whole size of the element
 	// we declare multiple backgrounds so that only modern browsers read this property
-	background-image: url('//image.webservices.ft.com/v1/images/raw/fticon:plus?format=svg&source=o-icons'), none;
+	background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/fticon:plus?format=svg&source=o-icons'), none;
 
 	display: inline-block;
 	width: 32px;
@@ -82,6 +82,14 @@ The 'base' of the service url can be set with the `$o-icons-service-base-url` va
 
 ```
 $o-icons-service-base-url: "https://my.image.service/foo";
+```
+
+will output an image service url in the format `https://my.image.service/foo/v2/images/raw/...`.
+
+The 'version' of the service url can be set with the `$o-icons-service-version` variable. e.g. setting
+
+```
+$o-icons-service-version: "v1";
 ```
 
 will output an image service url in the format `https://my.image.service/foo/v1/images/raw/...`.
@@ -111,7 +119,7 @@ Which outputs:
 
 ### 3. Manually using the Responsive Image Service
 
-If you can't use the mixins, and you need to see a custom size or colour, you can also use the [Responsive Image Service](https://image.webservices.ft.com) to fetch the icons in a very similar way as to how the mixin works:
+If you can't use the mixins, and you need to see a custom size or colour, you can also use the [Responsive Image Service](https://www.ft.com/__origami/service/image/v2) to fetch the icons in a very similar way as to how the mixin works:
 
 ```scss
 element {
@@ -120,11 +128,11 @@ element {
     height: 100px;
 
     // Older browsers: PNG fallback (resized to 100px wide)
-    background-image: url('//image.webservices.ft.com/v1/images/raw/fticon:tick?width=100&format=png&source=my-product');
+    background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/fticon:tick?width=100&format=png&source=my-product');
 
     // Modern browsers: SVG covering the whole size of the element
     // we declare multiple backgrounds so that only modern browsers read this property
-    background-image: url('//image.webservices.ft.com/v1/images/raw/fticon:tick?format=svg&source=my-product'), none;
+    background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/fticon:tick?format=svg&source=my-product'), none;
     background-size: cover;
 }
 ```
