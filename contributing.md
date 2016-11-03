@@ -60,4 +60,4 @@ The Image Service provides the ability to convert an SVG to a PNG. This is usefu
 
 The Image Service doesn't support clipPaths, so any SVG that has a clipPath in it may not render correctly. To check if your SVG works, upload it somewhere (eg dropbox, or gh-pages) and then run its public url through the Image Service with `format=png` as a parameter. ie:
 
-`https://image.webservices.ft.com/v1/images/raw/{http://path-to-image.svg}?source=test&format=png`
+`https://www.ft.com/__origami/service/image/v2/images/raw/{http://path-to-image.svg}?source=test&format=png`
