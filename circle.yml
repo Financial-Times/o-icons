@@ -2,7 +2,7 @@ machine:
   node:
     version: 6
   post:
-    - npm install -g origami-build-tools
+    - npm install -g origami-build-tools@^5
 dependencies:
   override:
     - obt install
@@ -12,3 +12,10 @@ test:
   override:
     - obt test
     - obt verify
+deployment:
+  publish-imageset:
+    tag: /v.*/
+    owner: Financial-Times
+    commands:
+      - ./node_modules/.bin/oist publish-s3 --bucket origami-imageset-data-eu --source-directory svg --scheme fticonold --scheme-version $CIRCLE_TAG
+      - ./node_modules/.bin/oist publish-s3 --bucket origami-imageset-data-us --source-directory svg --scheme fticonold --scheme-version $CIRCLE_TAG
