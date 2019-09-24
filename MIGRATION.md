@@ -10,7 +10,7 @@ The following mixins have been renamed:
 - `oIconsBaseStyles` is now `oIconsContentBaseStyles`.
 - `oIconsGetIcon` is now named `oIconsContentIcon`. Its arguments have also changed:
 	- `$container-width` and `$container-height` have been replaced with a single `$size` argument (our icons are square).
-	- `$apply-width-heigh` has been removed, so not to set a width/height set `$size: null` instead.
+	- `$apply-width-height` has been removed. So not to set a width/height set `$size: null` instead.
 	- `$apply-base-styles` has been renamed `$include-base-styles` to match other components.
 
 ### Migrating from v4 to v5
