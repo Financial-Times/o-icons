@@ -7,7 +7,7 @@ The following variables have been removed:
 - `$o-icons-service-base-url` and `$o-icons-service-version` have also been removed.
 
 The following mixins have been renamed:
-- `oIconsContentBaseStyles` is now `oIconsContentBaseStyles`.
+- `oIconsBaseStyles` is now `oIconsContentBaseStyles`.
 - `oIconsGetIcon` is now named `oIconsContentIcon`. Its arguments have also changed:
 	- `$container-width` and `$container-height` have been replaced with a single `$size` argument (our icons are square).
 	- `$apply-width-heigh` has been removed, so not to set a width/height set `$size: null` instead.
