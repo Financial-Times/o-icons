@@ -8,7 +8,18 @@
 /// @param {Integer} $iconset-version [1] - At present only 1 version of the icon set is available.
 
 @mixin oIconsContentIcon($icon-name, $color: null, $size: 128, $include-base-styles: true, $high-contrast-fallback: true, $iconset-version: 1) {
+	// Error if the global $system-code variable is not set.
+	// This is required for image service requests.
+	@if(global-variable-exists('system-code') == false or type-of($system-code) != 'string') {
+		@error 'A global "$system-code" Sass variable must be set to a valid Bizops system code (\e]8;;https://biz-ops.in.ft.com/list/Systems\e\\https://biz-ops.in.ft.com/list/Systems\e]8;;\e\\).';
+	}
+
+	// Define base image service path.
+	$scheme: "fticon-v#{$iconset-version}";
+	$service-url: "https://www.ft.com/__origami/service/image/v2/images/raw/#{$scheme}:#{$icon-name}";
+
 	// Currently the only supported version of fticons is version 1.
+	// Error if a different fticons version is requested.
 	@if $iconset-version == 0 {
 		@error "Icon set version 0 is not supported with this version of o-icons. Please use version 1.";
 	} @else if $iconset-version > 1 {
@@ -18,16 +29,6 @@
 	// If the size of the icons has been given without a unit, default to px.
 	@if (type-of($size) == 'number' and unitless($size)) {
 		$size: $size + 0px;
-	}
-
-	// Build an image service url for the requested icon.
-	$scheme: "fticon-v#{$iconset-version}";
-	$service-url: "https://www.ft.com/__origami/service/image/v2/images/raw/#{$scheme}:#{$icon-name}";
-	$source: "o-icons";
-	$query: "?source=#{$source}";
-	@if $color != null {
-		$color: str-slice(ie-hex-str($color), 4);
-		$query: $query + "&tint=%23#{$color},%23#{$color}";
 	}
 
 	// Include base styles shared by all icons.
@@ -40,6 +41,12 @@
 	height: $size;
 
 	// Include the icon via the image service.
+	// Build an image service url for the requested icon.
+	$query: "?source=#{$system-code}";
+	@if $color != null {
+		$color: str-slice(ie-hex-str($color), 4);
+		$query: $query + "&tint=%23#{$color},%23#{$color}";
+	}
 	background-image: url($service-url + $query + "&format=svg");
 
 	// Include a fallback for Window's high contrast mode.
@@ -48,11 +55,11 @@
 	// sass-lint:disable no-vendor-prefixes
 	@if $high-contrast-fallback {
 		@media screen and (-ms-high-contrast: active) {
-			background-image: url($service-url + "?source=#{$source}&tint=%23ffffff,%23ffffff&format=svg");
+			background-image: url($service-url + "?source=#{$system-code}&tint=%23ffffff,%23ffffff&format=svg");
 		}
 
 		@media screen and (-ms-high-contrast: black-on-white) {
-			background-image: url($service-url + "?source=#{$source}&tint=%23000000,%23000000&format=svg");
+			background-image: url($service-url + "?source=#{$system-code}&tint=%23000000,%23000000&format=svg");
 		}
 	}
 	// sass-lint:enable no-vendor-prefixes
