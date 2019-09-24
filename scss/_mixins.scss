@@ -13,6 +13,11 @@
 		@error 'A global "$system-code" Sass variable must be set to a valid Bizops system code (\e]8;;https://biz-ops.in.ft.com/list/Systems\e\\https://biz-ops.in.ft.com/list/Systems\e]8;;\e\\).';
 	}
 
+	// If the size of the icons has been given without a unit, default to px.
+	@if (type-of($size) == 'number' and unitless($size)) {
+		$size: $size + 0px;
+	}
+
 	// Define base image service path.
 	$scheme: "fticon-v#{$iconset-version}";
 	$service-url: "https://www.ft.com/__origami/service/image/v2/images/raw/#{$scheme}:#{$icon-name}";
@@ -58,5 +63,5 @@
 	background-size: contain;
 	background-position: 50%;
 	background-color: transparent;
-	vertical-align: middle;
+	vertical-align: baseline;
 }
