@@ -2,6 +2,8 @@
 
 ### Migrating from v5 to v6
 
+The `vertical-align` property of icons is now `middle` by default (previously `baseline`), as the icon svg includes whitespace around the icon glyph ([related issue](https://github.com/Financial-Times/o-icons/issues/58)). Confirm your icons align with surrounding text, you may need to adjust margin/padding or restore `vertical-align: baseline;`.
+
 ### Migrating from v4 to v5
 
 The jump from 4 to 5 introduces an entirely new set of icons. Using these icons should be a lot easier as they have a uniform amount of white-space around them, so you don't need to individually size icons to work in your application harmoniously.
