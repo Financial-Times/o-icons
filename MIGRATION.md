@@ -2,15 +2,18 @@
 
 ### Migrating from v5 to v6
 
+
+The `vertical-align` property of icons is now `middle` by default (previously `baseline`), as the icon svg includes whitespace around the icon glyph ([related issue](https://github.com/Financial-Times/o-icons/issues/58)). Confirm your icons align with surrounding text, you may need to adjust margin/padding or restore `vertical-align: baseline;`.
+
 The following variables have been removed:
 - `$o-icons-use-local-assets` has been removed; icons always come via the image service. Local icons could not be coloured, and new icons are published to the image service via fticons, before being included by `o-icons`.
 - `$o-icons-service-base-url` and `$o-icons-service-version` have also been removed.
 
 The following mixins have been renamed:
-- `oIconsContentBaseStyles` is now `oIconsContentBaseStyles`.
+- `oIconsBaseStyles` is now `oIconsContentBaseStyles`.
 - `oIconsGetIcon` is now named `oIconsContentIcon`. Its arguments have also changed:
 	- `$container-width` and `$container-height` have been replaced with a single `$size` argument (our icons are square).
-	- `$apply-width-heigh` has been removed, so not to set a width/height set `$size: null` instead.
+	- `$apply-width-height` has been removed. So not to set a width/height set `$size: null` instead.
 	- `$apply-base-styles` has been renamed `$include-base-styles` to match other components.
 
 ### Migrating from v4 to v5
