@@ -2,33 +2,16 @@
 
 ### Migrating from v5 to v6
 
-The following variables have been renamed or removed:
+The following variables have been removed:
 - `$o-icons-use-local-assets` has been removed; icons always come via the image service. Local icons could not be coloured, and new icons are published to the image service via fticons, before being included by `o-icons`.
 - `$o-icons-service-base-url` and `$o-icons-service-version` have also been removed.
 
 The following mixins have been renamed:
 - `oIconsContentBaseStyles` is now `oIconsContentBaseStyles`.
-
-`oIconsGetIcon` is now named `oIconsContentIcon`. Its arguments have also changed:
-- `$container-width` and `$container-height` have been replaced with a single `$size` argument (our icons are square).
-- `$apply-width-heigh` has been removed, so not to set a width/height set `$size: null` instead.
-- `$apply-base-styles` has been renamed `$include-base-styles` to match other components.
-
-E.g.
-```diff
--@include oIconsGetIcon('audio', oColorsGetPaletteColor('white'), 40);
-+@include oIconsContentIcon('audio', oColorsGetPaletteColor('white'), 40);
-```
-
-A full example, showing all arguments:
-```diff
--@include oIconsGetIcon($icon-name: 'arrow-right', $color: null, $container-width: 128, $container-height: null, $apply-base-styles: true, $apply-width-height: true, $iconset-version: 1, $high-contrast-fallback: true)
-+@include oIconsContentIcon($icon-name: 'arrow-right', $color: null, $size: 128, $opts: (
-+	'base-styles': true,
-+	'high-contrast-fallback': true,
-+	'iconset-version': 1,
-+));
-```
+- `oIconsGetIcon` is now named `oIconsContentIcon`. Its arguments have also changed:
+	- `$container-width` and `$container-height` have been replaced with a single `$size` argument (our icons are square).
+	- `$apply-width-heigh` has been removed, so not to set a width/height set `$size: null` instead.
+	- `$apply-base-styles` has been renamed `$include-base-styles` to match other components.
 
 ### Migrating from v4 to v5
 
