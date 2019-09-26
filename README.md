@@ -56,7 +56,7 @@ Use `oIconsContentIcon` to output the styles for an icon of a given size and col
 <span class="my-icon-plus"></span>
 ```
 
-The `oIconsContentIcon` mixins outputs styles used by each icon. This is inefficient if your project outputs multiple icons. In this case we recommend outputting the base styles separately.
+The `oIconsContentIcon` mixins outputs styles used by each icon. This is inefficient if your project outputs multiple icons. In this case we recommend outputting the base styles separately with `oIconsContentBaseStyles`.
 
 ```scss
 // Output a 32px, claret coloured plus icon.
