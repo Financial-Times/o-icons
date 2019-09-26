@@ -14,8 +14,8 @@ Helper Sass for the [fticons](http://registry.origami.ft.com/components/fticons)
 
 There are a few ways to get icons from `fticons`:
 
-1. Using [o-icons CSS classes](#markup)
-2. Using [o-icons Sass mixins](#sass) with your own CSS.
+1. Use [o-icons CSS classes](#markup)
+2. Use [o-icons Sass mixins](#sass) with your own CSS.
 3. Request the icon directly from the [Image Service](https://www.ft.com/__origami/service/image/v2/docs/url-builder?url=fticon-v1%3Aarrow-down&preview=true) (without using o-icons at all).
 
 
