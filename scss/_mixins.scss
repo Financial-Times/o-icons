@@ -52,6 +52,12 @@
 	// Prevents dimension styles being output by default.
 	// Resolves issue where previous component `o-ft-icons` the mixin this replaces,
 	// dimension styles were included within the $apply-base-styles block as well.
+	@if (type-of($container-width) == 'number' and unitless($container-width)) {
+		$container-width: $container-width + 0px;
+	}
+	@if (type-of($container-height) == 'number' and unitless($container-height)) {
+		$container-height: $container-height + 0px;
+	}
 	@if ($apply-width-height == true) {
 		width: $container-width + 0px;
 		@if ($container-height == null) {
