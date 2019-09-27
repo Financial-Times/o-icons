@@ -59,11 +59,11 @@
 		$container-height: $container-height + 0px;
 	}
 	@if ($apply-width-height == true) {
-		width: $container-width + 0px;
+		width: $container-width;
 		@if ($container-height == null) {
 			$container-height: $container-width;
 		}
-		height: $container-height + 0px;
+		height: $container-height;
 	}
 
 	@if ($apply-base-styles == true) {
