@@ -20,7 +20,7 @@
 
 	@each $icon in map-get($opts, icons) {
 		.o-icons-icon--#{$icon} {
-			@include oIconsContentIcon($icon, $include-base-styles: false);
+			@include oIconsContent($icon, $include-base-styles: false);
 		}
 	}
 }
