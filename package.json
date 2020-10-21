@@ -1,5 +1,5 @@
 {
-    "name": "o-icons",
+    "name": "@financial-times/o-icons",
     "devDependencies": {
         "eslint": "^7.9.0",
         "eslint-config-origami-component": "^2.1.0",
