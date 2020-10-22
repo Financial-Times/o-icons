@@ -8,12 +8,12 @@
     },
     "browser": "main.js",
     "peerDependencies": {
-        "@financial-times/fticons": "^100.0.0-6",
-        "@financial-times/o-assets": "^100.0.0-6"
+        "@financial-times/fticons": "^100.0.0-7",
+        "@financial-times/o-assets": "^100.0.0-7"
     },
     "description": "Helper SCSS tool for using the FT's icons. For a full list of available icons please see the fticons image set",
     "publishConfig": {
         "registry": "http://localhost:4873"
     },
-    "version": "100.0.0-6"
+    "version": "100.0.0-7"
 }
