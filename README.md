@@ -48,8 +48,8 @@ The `$color` argument should be set using an [o-colors](https://registry.origami
 
 ```scss
 // Use o-colors so you can use colors from the Origami palette.
-@import "o-icons/main";
-@import "o-colors/main";
+@import "@financial-times/o-icons/main";
+@import "@financial-times/o-colors/main";
 
 // Output a 32px, claret coloured plus icon.
 .my-icon-plus {
@@ -103,7 +103,7 @@ The `oIconsContent` mixins outputs styles used by each icon. This is inefficient
 
 To output all icon [helper classes](#markup) include the `oIcons` mixin.
 ```scss
-@import "o-icons/main";
+@import "@financial-times/o-icons/main";
 @include oIcons(); // include helper classes for all icons
 ```
 
