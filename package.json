@@ -1,19 +1,19 @@
 {
     "name": "@financial-times/o-icons",
+    "version": "100.0.0-7",
+    "description": "Helper SCSS tool for using the FT's icons. For a full list of available icons please see the fticons image set",
+    "browser": "main.js",
     "devDependencies": {
         "eslint": "^7.9.0",
         "eslint-config-origami-component": "^2.1.0",
         "origami-ci-tools": "^2.0.2",
         "stylelint-config-origami-component": "^1.0.4"
     },
-    "browser": "main.js",
     "peerDependencies": {
         "@financial-times/fticons": "^100.0.0-7",
         "@financial-times/o-assets": "^100.0.0-7"
     },
-    "description": "Helper SCSS tool for using the FT's icons. For a full list of available icons please see the fticons image set",
     "publishConfig": {
         "registry": "http://localhost:4873"
-    },
-    "version": "100.0.0-7"
+    }
 }
