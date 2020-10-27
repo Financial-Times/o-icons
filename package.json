@@ -18,10 +18,10 @@
         "stylelint-config-origami-component": "^1.0.4"
     },
     "peerDependencies": {
-        "@financial-times/fticons": "^100.0.0-8",
-        "@financial-times/o-assets": "^100.0.0-8"
+        "@financial-times/fticons": "^100.0.0-9",
+        "@financial-times/o-assets": "^100.0.0-9"
     },
     "publishConfig": {
-        "registry": "http://localhost:4873"
+        "registry": "https://origami-npm-registry-prototype.herokuapp.com"
     }
 }
