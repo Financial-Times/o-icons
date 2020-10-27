@@ -1,6 +1,6 @@
 {
     "name": "@financial-times/o-icons",
-    "version": "100.0.0-7",
+    "version": "100.0.0-8",
     "description": "Helper SCSS tool for using the FT's icons. For a full list of available icons please see the fticons image set",
     "license": "MIT",
     "type": "module",
@@ -18,8 +18,8 @@
         "stylelint-config-origami-component": "^1.0.4"
     },
     "peerDependencies": {
-        "@financial-times/fticons": "^100.0.0-7",
-        "@financial-times/o-assets": "^100.0.0-7"
+        "@financial-times/fticons": "^100.0.0-8",
+        "@financial-times/o-assets": "^100.0.0-8"
     },
     "publishConfig": {
         "registry": "http://localhost:4873"
