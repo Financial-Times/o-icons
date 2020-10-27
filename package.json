@@ -1,27 +1,38 @@
 {
-    "name": "@financial-times/o-icons",
-    "version": "100.0.0-8",
-    "description": "Helper SCSS tool for using the FT's icons. For a full list of available icons please see the fticons image set",
-    "license": "MIT",
-    "type": "module",
-    "exports": {
-        ".": {
-            "browser": "./main.js"
-        }
-    },
-    "browser": "./main.js",
-    "types": "types",
-    "devDependencies": {
-        "eslint": "^7.9.0",
-        "eslint-config-origami-component": "^2.1.0",
-        "origami-ci-tools": "^2.0.2",
-        "stylelint-config-origami-component": "^1.0.4"
-    },
-    "peerDependencies": {
-        "@financial-times/fticons": "^100.0.0-9",
-        "@financial-times/o-assets": "^100.0.0-9"
-    },
-    "publishConfig": {
-        "registry": "https://origami-npm-registry-prototype.herokuapp.com"
+  "name": "@financial-times/o-icons",
+  "version": "100.0.0-10",
+  "description": "Helper SCSS tool for using the FT's icons. For a full list of available icons please see the fticons image set",
+  "keywords": [],
+  "homepage": "https://github.com/Financial-Times/o-icons#readme",
+  "bugs": {
+    "url": "https://github.com/Financial-Times/o-icons/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Financial-Times/o-icons.git"
+  },
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "exports": {
+    ".": {
+      "browser": "./main.js"
     }
+  },
+
+  "browser": "./main.js",
+  "types": "types",
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-config-origami-component": "^2.1.0",
+    "origami-ci-tools": "^2.0.2",
+    "stylelint-config-origami-component": "^1.0.4"
+  },
+  "peerDependencies": {
+    "@financial-times/fticons": "^100.0.0-10",
+    "@financial-times/o-assets": "^100.0.0-10"
+  },
+  "publishConfig": {
+    "registry": "https://origami-npm-registry-prototype.herokuapp.com"
+  }
 }
