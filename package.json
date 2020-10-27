@@ -2,7 +2,15 @@
     "name": "@financial-times/o-icons",
     "version": "100.0.0-7",
     "description": "Helper SCSS tool for using the FT's icons. For a full list of available icons please see the fticons image set",
-    "browser": "main.js",
+    "license": "MIT",
+    "type": "module",
+    "exports": {
+        ".": {
+            "browser": "./main.js"
+        }
+    },
+    "browser": "./main.js",
+    "types": "types",
     "devDependencies": {
         "eslint": "^7.9.0",
         "eslint-config-origami-component": "^2.1.0",
