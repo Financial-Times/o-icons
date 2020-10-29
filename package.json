@@ -19,14 +19,14 @@
       "browser": "./main.js"
     }
   },
-
   "browser": "./main.js",
-  "types": "types",
+  "types": "./types/main.d.ts",
   "devDependencies": {
     "eslint": "^7.9.0",
     "eslint-config-origami-component": "^2.1.0",
     "origami-ci-tools": "^2.0.2",
-    "stylelint-config-origami-component": "^1.0.4"
+    "stylelint-config-origami-component": "^1.0.4",
+    "typescript": "^4.0.5"
   },
   "peerDependencies": {
     "@financial-times/fticons": "^100.0.0-10",
