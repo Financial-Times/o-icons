@@ -1,6 +1,6 @@
 {
   "name": "@financial-times/o-icons",
-  "version": "100.0.0-11",
+  "version": "100.0.0-12",
   "description": "Helper SCSS tool for using the FT's icons. For a full list of available icons please see the fticons image set",
   "keywords": [],
   "homepage": "https://github.com/Financial-Times/o-icons#readme",
@@ -29,8 +29,8 @@
     "typescript": "^4.0.5"
   },
   "peerDependencies": {
-    "@financial-times/fticons": "^100.0.0-11",
-    "@financial-times/o-assets": "^100.0.0-11"
+    "@financial-times/fticons": "^100.0.0-12",
+    "@financial-times/o-assets": "^100.0.0-12"
   },
   "publishConfig": {
     "registry": "https://origami-npm-registry-prototype.herokuapp.com"
