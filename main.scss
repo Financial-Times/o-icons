@@ -22,6 +22,10 @@
 		.o-icons-icon--#{$icon} {
 			@include oIconsContent($icon, $include-base-styles: false);
 		}
+		
+		.o-icons-small-icon--#{$icon} {
+			@include oIconsContent($icon, $size: 40, $include-base-styles: false);
+		}
 	}
 }
 
