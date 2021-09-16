@@ -1,5 +1,11 @@
 # o-icons
 
+***
+
+**This component has moved to the [Origami Component System](https://github.com/Financial-Times/origami).**
+
+***
+
 Helper Sass for the [fticons](http://registry.origami.ft.com/components/fticons) image set.
 
 -   [Usage](#usage)
